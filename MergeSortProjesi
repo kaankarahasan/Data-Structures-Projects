@@ -1,0 +1,63 @@
+### Merge Sort Aşamaları
+
+Verilen dizi: \([16, 21, 11, 8, 12, 22]\)
+
+Merge Sort, diziyi tekrar tekrar yarıya böler ve ardından parçaları birleştirerek sıralar. Aşamaları aşağıda gösterilmiştir:
+
+**1. Adım: Diziyi Bölme**
+
+\[ [16, 21, 11, 8, 12, 22] \]
+Dizi ikiye bölünür:
+
+\[ [16, 21, 11] \quad \text{ve} \quad [8, 12, 22] \]
+
+**2. Adım: Alt Dizileri Bölme**
+
+Sol alt dizi: \([16, 21, 11]\)
+Sağ alt dizi: \([8, 12, 22]\)
+
+Sol alt dizi ikiye bölünür:
+\[ [16] \quad \text{ve} \quad [21, 11] \]
+
+Sağ alt dizi ikiye bölünür:
+\[ [8] \quad \text{ve} \quad [12, 22] \]
+
+Daha da bölelim:
+
+\[ [21, 11] \] -> \[ [21] \quad \text{ve} \quad [11] \]
+\[ [12, 22] \] -> \[ [12] \quad \text{ve} \quad [22] \]
+
+**3. Adım: Alt Dizileri Sıralama ve Birleştirme**
+
+En küçük alt diziler zaten sıralıdır. Şimdi birleştirerek devam edelim:
+
+\[ [21] \quad \text{ve} \quad [11] \] -> \[ [11, 21] \]
+
+\[ [12] \quad \text{ve} \quad [22] \] -> \[ [12, 22] \]
+
+Şimdi bu alt dizileri sırasıyla birleştirerek devam edelim:
+
+Sol alt dizi:
+\[ [16] \quad \text{ve} \quad [11, 21] \] -> \[ [11, 16, 21] \]
+
+Sağ alt dizi:
+\[ [8] \quad \text{ve} \quad [12, 22] \] -> \[ [8, 12, 22] \]
+
+Son olarak, bu iki sıralı alt diziyi birleştiriyoruz:
+\[ [11, 16, 21] \quad \text{ve} \quad [8, 12, 22] \] -> \[ [8, 11, 12, 16, 21, 22] \]
+
+### Merge Sort Aşamalarının Özeti
+
+1. Dizi ikiye bölünür: \([16, 21, 11] \quad \text{ve} \quad [8, 12, 22]\)
+2. Alt diziler tekrar bölünür: \([16], [21, 11], [8], [12, 22]\)
+3. Daha da bölünür: \([21], [11], [12], [22]\)
+4. Alt diziler sıralanır ve birleştirilir: \([11, 21], [12, 22]\)
+5. Daha büyük alt diziler birleştirilir: \([11, 16, 21], [8, 12, 22]\)
+6. Son olarak tüm dizi birleştirilir: \([8, 11, 12, 16, 21, 22]\)
+
+### Big-O Gösterimi
+
+Merge Sort'un zaman karmaşıklığı \(O(n \log n)\) olarak bilinir. Çünkü dizi her adımda yarıya bölünür ve her bir adımda tüm elemanlar birleştirilir.
+
+Bu yüzden, Merge Sort'un Big-O gösterimi:
+\[ O(n \log n) \]
